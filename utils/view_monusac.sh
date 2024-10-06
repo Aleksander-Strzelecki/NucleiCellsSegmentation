@@ -1,0 +1,1 @@
+python coco-viewer/cocoviewer.py -i ../data/processed/MoNuSAC_coco/train -a ../data/processed/MoNuSAC_coco/train.json

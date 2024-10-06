@@ -1,0 +1,1 @@
+# Web application folder for keeping uploaded *.tif images

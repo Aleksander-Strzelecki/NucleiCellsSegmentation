@@ -1,0 +1,1 @@
+python ../../../mmdetection/tools/train.py ./pointrend_r50-3x_monusac.py

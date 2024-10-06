@@ -1,0 +1,18 @@
+[submodule "sahi"]
+	path = sahi
+	url = ../sahi.git
+[submodule "mmdetection"]
+	path = mmdetection
+	url = https://github.com/open-mmlab/mmdetection.git
+[submodule "hover_net"]
+	path = hover_net
+	url = https://github.com/Aleksander-Strzelecki/hover_net.git
+[submodule "histopathology_app/ultralytics"]
+	path = ultralytics
+	url = https://github.com/Aleksander-Strzelecki/ultralytics.git
+[submodule "mmcv"]
+	path = mmcv
+	url = https://github.com/Aleksander-Strzelecki/mmcv.git
+[submodule "pycococreator"]
+	path = pycococreator
+	url = https://github.com/Aleksander-Strzelecki/pycococreator.git

@@ -1,0 +1,2 @@
+python ../../hover_net/run_infer.py --batch_size=16 --nr_types=5 --type_info_path=./data/monusac_type.json --model_path=./models/hovernet_fast_monusac_type_tf2pytorch.tar \
+tile --input_dir=../data/processed/MoNuSAC_test/images --output_dir=../data/processed/hover_net --save_raw_map

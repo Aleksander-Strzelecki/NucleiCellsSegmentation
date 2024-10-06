@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histopathology Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Predykcja komórek na obrazach histopatologicznych</h1>
+        <form id="uploadForm" action="/predict" method="post" enctype="multipart/form-data">
+            <label for="file">Wybierz obraz histopatologiczny (TIF format):</label>
+            <input type="file" id="file" name="file" accept=".tif" required><br><br>
+
+            <label for="model">Wybierz model:</label>
+            <select name="model" id="model" required>
+                <option value="hovernet">HoverNet</option>
+                <option value="solov2">SOLOv2</option>
+                <option value="yolov8">YOLOv8</option>
+                <option value="condinst">CondInst</option>
+                <option value="queryinst">QueryInst</option>
+                <option value="mask_rcnn">MaskRCNN</option>
+            </select><br><br>
+
+            <button type="submit">Predykcja</button>
+        </form>
+    </div>
+
+     <div id="loadingSpinner" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Wynik Predykcji</h2>
+            <label for="showPrediction">Pokaz/Ukryj predykcje</label>
+            <input type="checkbox" id="showPrediction" name="showPrediction" checked>
+
+            <img id="resultImage" src="" alt="Predicted Image">
+            <div id="legend">
+                <h3>Legenda:</h3>
+                <ul>
+                    <li><span style="color: yellow;">&#9632;</span> Lymphocyte - Żółty</li>
+                    <li><span style="color: blue;">&#9632;</span> Neutrophil - Niebieski</li>
+                    <li><span style="color: red;">&#9632;</span> Epithelial - Czerwony</li>
+                    <li><span style="color: green;">&#9632;</span> Macrophage - Zielony</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static',filename='script.js') }}"></script>
+</body>
+</html>

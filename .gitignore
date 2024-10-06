@@ -1,0 +1,32 @@
+/data/
+.spyproject/
+# !/data/raw/MoNuSAC/*
+.vscode/
+__pycache__/
+hover_net/models/
+
+hover_net/hover_net/.vscode
+hover_net/hover_net/*__pycache__
+
+# directories
+hover_net/hover_net/cache/
+hover_net/hover_net/dataset/
+hover_net/hover_net/exp_output/
+
+# checkpoint paths
+hover_net/hover_net/*.npz
+hover_net/hover_net/*.png
+hover_net/hover_net/*.log
+
+/src/models/runs/
+
+/src/models/mmdetection/work_dirs/
+/src/models/wandb/
+/src/models/weights/
+
+/histopathology_app/models/weights/*.pth
+/histopathology_app/models/weights/*.pt
+/histopathology_app/models/weights/*.tar
+/histopathology_app/models/tmp/
+/histopathology_app/uploads/*.tif
+/histopathology_app/debug.log
